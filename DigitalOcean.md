@@ -1,5 +1,9 @@
 # Digital Ocean and R
 
+This is a brief how to on how I set up my Digital Ocean droplet to run RStudio server and Shiny server.
+
+Personally, I'm running a 1GB RAM Ubuntu (14.04 x64) server with 30GB disk space and 2TB monthly transfer capacity in Singapore for $10/month.
+
 ## Security
 
 You'll want to generate a public/private rsa key pair to ensure beef up security for people logging in to your server via ssh.  This can be done at the command line of any unix system:
@@ -32,7 +36,7 @@ Note that `~/sshKeys/digitalocean` is the path to the private key location, whic
 
 ## Spinning up a server
 
-Super simple, just head over to digitalocean.com and get a server going. At the end of this process, you will be given the IP address of your new server (we'll use the example, 123.456.789.01).  You should then be able to ssh in using
+Super simple, just head over to [Digital Ocean](https://www.digitalocean.com/?refcode=a5460d741db7) (if you use this [this link](https://www.digitalocean.com/?refcode=a5460d741db7) you get $10 free credit) create a droplet (and on the same page add the ssh key) and get a server going. At the end of this process, you will be given the IP address of your new server (we'll use the example, 123.456.789.01).  You should then be able to ssh in using
 
 ```
 ssh root@123.456.789.01
@@ -111,7 +115,7 @@ sudo gdebi rstudio-server-0.99.441-amd64.deb
 
 All being well, we should be able to access RStudio remotely at:
 
-http://:8787/
+http://123.456.789.01:8787/
 
 using the log in credentials of the non-root user we created earlier (you cannot log in to RStudio server as root).
 
@@ -186,7 +190,7 @@ Any apps that are going to be made public I write in a private github repository
 
 Apache log in server needs to sit "in front" of the shiny server.
 
-I adapted the instructions found here:
+This section is not necessarily complete. User beware! I adapted the instructions found here:
 https://support.rstudio.com/hc/en-us/articles/200552326-Running-with-a-Proxy
 
 ```
