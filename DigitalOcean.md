@@ -4,7 +4,7 @@ This is a brief how to on how I set up my [Digital Ocean](https://www.digitaloce
 
 Personally, I'm running a 1GB RAM Ubuntu (14.04 x64) server with 30GB disk space and 2TB monthly transfer capacity in Singapore for $10/month.
 
-I initially followed [this guide](http://johndharrison.blogspot.com.au/2014/03/rstudioshiny-server-on-digital-ocean.html) by John Harrison and got some help with setting up authentication January Weiner's post [here](https://logfc.wordpress.com/2014/12/05/adding-authentication-to-a-shiny-server/).
+I initially followed [this guide](http://johndharrison.blogspot.com.au/2014/03/rstudioshiny-server-on-digital-ocean.html) by John Harrison and got some help with setting up authentication from January Weiner's post [here](https://logfc.wordpress.com/2014/12/05/adding-authentication-to-a-shiny-server/).
 
 ## Security
 
@@ -180,7 +180,7 @@ sudo su - -c "R -e \"install.packages('pacman', repos='http://cran.rstudio.com/'
 
 ## Install git
 
-I find the best way to move shiny apps between my computer and the server is to use git (specifically github).  
+I find the best way to move shiny apps between my computer and the server is to use git (and specifically Github).  
 
 ```
 sudo apt-get install git
