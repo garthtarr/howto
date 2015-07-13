@@ -4,6 +4,8 @@ This is a brief how to on how I set up my [Digital Ocean](https://www.digitaloce
 
 Personally, I'm running a 1GB RAM Ubuntu (14.04 x64) server with 30GB disk space and 2TB monthly transfer capacity in Singapore for $10/month.
 
+I initially followed [this guide](http://johndharrison.blogspot.com.au/2014/03/rstudioshiny-server-on-digital-ocean.html) by John Harrison and got some help with setting up authentication January Weiner's post [here](https://logfc.wordpress.com/2014/12/05/adding-authentication-to-a-shiny-server/).
+
 ## Security
 
 You'll want to generate a public/private rsa key pair to ensure beef up security for people logging in to your server via ssh.  This can be done at the command line of any unix system:
