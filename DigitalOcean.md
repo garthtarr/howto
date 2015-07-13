@@ -1,6 +1,6 @@
 # Digital Ocean and R
 
-This is a brief how to on how I set up my Digital Ocean droplet to run RStudio server and Shiny server.
+This is a brief how to on how I set up my [Digital Ocean](https://www.digitalocean.com/?refcode=a5460d741db7) droplet to run RStudio server and Shiny server.
 
 Personally, I'm running a 1GB RAM Ubuntu (14.04 x64) server with 30GB disk space and 2TB monthly transfer capacity in Singapore for $10/month.
 
