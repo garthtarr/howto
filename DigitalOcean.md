@@ -325,3 +325,23 @@ Set permission of the swap area so only root has access:
 chown root:root /swapfile
 chmod 0600 /swapfile
 ```
+
+## Displaying one webpage within another webpage
+
+On your web server, create a folder in your web directory where you want the app to be located.  In that folder, create a file called `index.html` with the following lines of HTML code:
+```
+<html>
+<head>
+<title>TITLE OF APPLICATION</title>
+</head>
+<body style="margin:0; padding:0">
+<object type="text/html" data="http://123.456.789.02/path/to/shiny/app/" style="width:100%; height:100%; padding:0px">
+<p>Access the source app <a href="http://123.456.789.02/path/to/shiny/app/">here</a>.</p>
+</object>
+</body>
+</html>
+```
+
+Note that the text inside the `<p></p>` tag will only appear when your web server was unable to access the shiny server.  You could have it say anything you want.
+
+You can see an example of this set up in action [here](http://garthtarr.com/apps/mplot) which is really just showing [this](http://128.199.224.73/mplot-diabetes/) page.
