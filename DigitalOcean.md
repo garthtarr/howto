@@ -10,10 +10,10 @@ If you're running a server as part of a team, someone will need to sign up first
 
 > Invite Team Members
 >
-> Members can create and manage Droplets, Images and DNS records.
-> All resources created by members will be charged to the payment method on your account.
-> Only the team owner (you) can view and edit your billing details and team settings.
-> Email addresses already associated with DigitalOcean accounts cannot be invited to a team.
+> - Members can create and manage Droplets, Images and DNS records.
+> - All resources created by members will be charged to the payment method on your account.
+> - Only the team owner (you) can view and edit your billing details and team settings.
+> - Email addresses already associated with DigitalOcean accounts cannot be invited to a team.
 
 This enables people to log in to the Digital Ocean portal, but is separate from making a user account on the server itself.
 
