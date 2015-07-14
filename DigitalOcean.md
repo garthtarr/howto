@@ -6,6 +6,17 @@ Personally, I'm running a 1GB RAM Ubuntu (14.04 x64) server with 30GB disk space
 
 I initially followed [this guide](http://johndharrison.blogspot.com.au/2014/03/rstudioshiny-server-on-digital-ocean.html) by John Harrison and got some help with setting up authentication from January Weiner's post [here](https://logfc.wordpress.com/2014/12/05/adding-authentication-to-a-shiny-server/).
 
+If you're running a server as part of a team, someone will need to sign up first (the team leader) and then they can provide access to other people:
+
+> Invite Team Members
+>
+> Members can create and manage Droplets, Images and DNS records.
+> All resources created by members will be charged to the payment method on your account.
+> Only the team owner (you) can view and edit your billing details and team settings.
+> Email addresses already associated with DigitalOcean accounts cannot be invited to a team.
+
+This enables people to log in to the Digital Ocean portal, but is separate from making a user account on the server itself.
+
 ## Security
 
 You'll want to generate a public/private rsa key pair to ensure beef up security for people logging in to your server via ssh.  This can be done at the command line of any unix system:
