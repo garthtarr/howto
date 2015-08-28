@@ -234,6 +234,12 @@ If you'd like to transfer in the other direction, i.e. from your personal comput
 scp LOCAL/PATH/TO/FILENAME ggt251@raijin.nci.org.au:/home/251/ggt251/
 ```
 
+Note 1: if you want to `scp` directories you need to use the `-rp` flag.  For example if I want to copy my entire Raijin directory to the current working directory on my personal computer I'd use:
+```
+scp -rp ggt251@raijin.nci.org.au:/home/251/ggt251/* .
+```
+
+Note 2: if you're using **zsh** (instead of, for example, bash) you will need to escape the wildcard.  This means using `\*` wherever you see `*`.
 
 
 ### Parallel processing in R
