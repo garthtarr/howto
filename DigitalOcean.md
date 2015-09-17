@@ -345,3 +345,46 @@ On your web server, create a folder in your web directory where you want the app
 Note that the text inside the `<p></p>` tag will only appear when your web server was unable to access the shiny server.  You could have it say anything you want.
 
 You can see an example of this set up in action [here](http://garthtarr.com/apps/mplot) which is really just showing [this](http://128.199.224.73/mplot-diabetes/) page.
+
+
+## Installing the R package rgdal on DigitalOcean (Ubuntu server)
+
+Trying
+```
+sudo su - -c "R -e \"install.packages('rgdal', repos='http://cran.rstudio.com/')\""
+```
+gives the error
+
+```
+configure: error: gdal-config not found or not executable.
+ERROR: configuration failed for package ‘rgdal’
+```
+
+So installed:
+```
+apt-get install libgdal-dev
+```
+
+Then when I tried to install the rgdal package again I got the error
+```
+configure: error: proj_api.h not found in standard or given locations.
+ERROR: configuration failed for package ‘rgdal’
+```
+
+So then I installed:
+```
+apt-get install libproj-dev
+```
+
+Then everything went fine using the usual:
+
+```
+sudo su - -c "R -e \"install.packages('rgdal', repos='http://cran.rstudio.com/')\""
+```
+
+To summarise, I needed to install both  `libgdal-dev` and `libproj-dev` at the command line first:
+
+```
+apt-get install libgdal-dev
+apt-get install libproj-dev
+```
